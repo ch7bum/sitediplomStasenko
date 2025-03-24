@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>СТАВСТРОЙДОМ - Строительные Материалы</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <!-- Подключаем локальный Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+<!-- Иконка корзины -->
+<div id="cart-icon">
+    🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- Модальное окно корзины -->
+<div id="cart-modal">
+    <div id="cart-content">
+        <span id="close-cart">&times;</span>
+        <h2>Ваша корзина</h2>
+
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Итого</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Товары будут добавляться через JS -->
+            </tbody>
+        </table>
+
+        
+
+        <!-- Поля для ФИО и телефона -->
+        <div id="user-info">
+            <label for="full-name">ФИО:</label>
+            <input type="text" id="full-name" placeholder="Введите ФИО" required>
+
+            <label for="phone-number">Телефон:</label>
+            <input type="text" id="phone-number" placeholder="+7 (___) ___-__-__" required>
+        </div>
+
+        <button id="checkout-btn">Оформить заказ</button>
+    </div>
+</div>
+
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="./img/logo.png" alt="Логотип" width="40" height="40" class="me-2">
+            СТАВСТРОЙДОМ
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#about">О компании</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#products">Продукция</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link" href="construction.html">Комплектация строительства</a></li>
+                <li class="nav-item"><a class="nav-link" href="partners.html">Карта партнера</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- О компании -->
+<header class="bg-light py-5 mt-5" id="about">
+    <div class="container text-center">
+        <br>
+        <h1 class="fw-bold">ООО "СТАВСТРОЙДОМ"</h1>
+        <p class="lead">Производитель железобетонных изделий и строительных материалов в Ставрополе.</p>
+        <a href="about.html" class="btn btn-primary btn-lg">Узнать больше</a>
+    </div>
+</header>
+
+<!-- Продукция -->
+<section class="container py-5" id="products">
+    <h2 class="text-center mb-4">Наша продукция</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <a href="product1.html" class="card">
+                <img src="./img/jbi.jpg" class="card-img-top" alt="ЖБИ">
+                <div class="card-body">
+                    <h5 class="card-title">ЖБИ для дорожного строительства и ограждения</h5>
+                    <p class="card-text">Качественные и надежные ЖБИ.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="product2.html" class="card">
+                <img src="./img/lights.png" class="card-img-top" alt="Опоры освещения">
+                <div class="card-body">
+                    <h5 class="card-title">Опоры освещения и линии элетропередачи</h5>
+                    <p class="card-text">Надежные и долговечные опоры освещения.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="product3.html" class="card">
+                <img src="./img/bricks.png" class="card-img-top" alt="Кирпичи">
+                <div class="card-body">
+                    <h5 class="card-title">ЖБИ для промышленного и жилищного строительства</h5>
+                    <p class="card-text">Лучшие материалы для строительства.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section class="bg-light py-5" id="contacts">
+    <div class="container text-center">
+        <h2>Контакты</h2>
+        <p><strong>Адрес:</strong> г. Ставрополь, ул. Доваторцев 41А, офис 13</p>
+        <p><strong>Телефон:</strong> <a href="tel:+79682684228">8-968-268-42-28</a></p>
+        <p><strong>Email:</strong> <a href="mailto:stavsd@mail.ru">stavsd@mail.ru</a></p>
+        <p><strong>Режим работы: 9.00 - 18.00</strong></p>
+    </div>
+</section>
+
+<!-- Подвал -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 СтавСтройДом. Все права защищены.</p>
+</footer>
+
+<script src="./JS/cart.js"></script>
+<!-- Подключаем локальный Bootstrap JS -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

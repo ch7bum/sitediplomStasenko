@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Плиты перекрытия промышленные - СТАВСТРОЙДОМ</title>
+    
+    <!-- Подключаем локальный Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+
+<!-- Иконка корзины -->
+<div id="cart-icon">
+    🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- Модальное окно корзины -->
+<div id="cart-modal">
+    <div id="cart-content">
+        <span id="close-cart">&times;</span>
+        <h2>Ваша корзина</h2>
+
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Итого</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Товары будут добавляться через JS -->
+            </tbody>
+        </table>
+
+       
+
+        <!-- Поля для ФИО и телефона -->
+        <div id="user-info">
+            <label for="full-name">ФИО:</label>
+            <input type="text" id="full-name" placeholder="Введите ФИО" required>
+
+            <label for="phone-number">Телефон:</label>
+            <input type="text" id="phone-number" placeholder="+7 (___) ___-__-__" required>
+        </div>
+
+        <button id="checkout-btn">Оформить заказ</button>
+    </div>
+</div>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./img/logo.png" alt="Логотип" width="40" height="40" class="me-2">
+                СТАВСТРОЙДОМ
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">О компании</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Продукция</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="construction.html">Комплектация строительства</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partners.html">Карта партнера</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+    <!-- Продукция плиты перекрытия -->
+    <section class="container py-5" id="products">
+        <h2 class="text-center mb-4">ЖБИ для промышленного и жилищного строительства</h2>
+        <div class="row g-4">
+            <div class="col-md-1000">
+                <div class="card">
+                    <img src="./img/plates.jpg" class="card-img-top" alt="Плита перекрытия промышленные">
+                    <div class="card-body">
+                        <h5 class="card-title">Плита перекрытия промышленные</h5>
+                        <p class="card-text">Мы производим плиты перекрытия для промышленных зданий, которые подходят для различных объектов строительства, включая производственные предприятия.</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Наименование</th>
+                                    <th>Длина, мм</th>
+                                    <th>Ширина, мм</th>
+                                    <th>Высота, мм</th>
+                                    <th>Вес, кг</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ПК 27.12.8-АIII</td>
+                                    <td>1190</td>
+                                    <td>1190</td>
+                                    <td>220</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <td>ПК 27.15.5-АIII</td>
+                                    <td>2650</td>
+                                    <td>1490</td>
+                                    <td>220</td>
+                                    <td>1300</td>
+                                </tr>
+                                <tr>
+                                    <td>ПК 27.15.6-АIII</td>
+                                    <td>2650</td>
+                                    <td>1490</td>
+                                    <td>220</td>
+                                    <td>1300</td>
+                                </tr>
+                                <tr>
+                                    <td>ПК 84.5-15.2-АV</td>
+                                    <td>8450</td>
+                                    <td>1500</td>
+                                    <td>270</td>
+                                    <td>3070</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary add-to-cart" onclick="addProductToCart('32', 'Плита перекрытия промышленные')">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+           
+<!-- Вторая карточка (лестничные ступени) -->
+<div class="col-md-1000">
+    <div class="card">
+        <img src="./img/stupeni.jpg" class="card-img-top" alt="Лестничные ступени">
+        <div class="card-body">
+            <h5 class="card-title">Лестничные ступени ЛС</h5>
+            <p class="card-text">Лестничные ступени из железобетона, предназначенные для использования в промышленных и жилых зданиях. Надежные и долговечные конструкции для любых типов лестниц.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>Размеры, мм</th>
+                        <th>Вес, кг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ступень ЛС 12 закругленная</td>
+                        <td>1360×320×150</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <td>ступень ЛС 12 прямоугольная</td>
+                        <td>1360×320×150</td>
+                        <td>112</td>
+                    </tr>
+                    <tr>
+                        <td>ступень ЛС 15 прямоугольная</td>
+                        <td>1360×320×150</td>
+                        <td>117</td>
+                    </tr>
+                    <tr>
+                        <td>ступень ЛС 18 прямоугольная</td>
+                        <td>1360×320×150</td>
+                        <td>124</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary add-to-cart" onclick="addProductToCart('33', 'Лестничные ступени')">
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-1000">
+    <div class="card">
+        <img src="./img/peremychki.jpg" class="card-img-top" alt="Перемычки">
+        <div class="card-body">
+            <h5 class="card-title">Перемычки плитные и брусковые</h5>
+            <p class="card-text">Перемычки и брусковые для строительных нужд, включая различные размеры и нагрузки. </p>
+            <a href="https://stavsd.ru/download/katalog-gbi-stavstroidom.pdf" class="btn btn-success mt-1" target="_blank">Скчать полный каталог ЖБИ</a>
+            <button class="btn btn-primary add-to-cart" onclick="addProductToCart('34', 'Перемычки плитные и брусковые')">
+                Добавить в корзину
+            </button>
+            <div class="collapse mt-1000" id="peremychkiDetails">
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-1000">
+    <div class="card">
+        <img src="./img/mnogopustotnieplati.jpg" class="card-img-top" alt="Перемычки">
+        <div class="card-body">
+            <h5 class="card-title">Плиты перекрытия многопустотные</h5>
+            <p class="card-text">Продукция, предназначенная для строительства и ремонта объектов.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>Длина, мм</th>
+                        <th>Ширина, мм</th>
+                        <th>Высота, мм</th>
+                        <th>Вес, кг</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Перемычка Т15</td>
+                        <td>1030</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>41</td>
+                    </tr>
+                    <tr>
+                        <td>Перемычка Т20</td>
+                        <td>1200</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Перемычка Т25</td>
+                        <td>1500</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>56</td>
+                    </tr>
+                    <tr>
+                        <td>Перемычка Т30</td>
+                        <td>1800</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>68</td>
+                    </tr>
+                    <tr>
+                        <td>Перемычка Т40</td>
+                        <td>2100</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>82</td>
+                    </tr>
+                    <tr>
+                        <td>Перемычка Т50</td>
+                        <td>2400</td>
+                        <td>120</td>
+                        <td>160</td>
+                        <td>96</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <a href="https://stavsd.ru/download/katalog-gbi-stavstroidom.pdf" class="btn btn-success mt-1" target="_blank">Скчать полный каталог ЖБИ</a>
+            <button class="btn btn-primary add-to-cart" onclick="addProductToCart('35', 'Плиты перекрытия многопустотные')">
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="index.html" class="btn btn-primary">Назад на главную</a>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 СтавСтройДом. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем локальный Bootstrap JS -->
+    <script src="./JS/cart.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
