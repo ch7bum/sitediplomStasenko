@@ -322,9 +322,3 @@ footer a:hover {
     overflow-x: auto;
 }
 
-/* Для мобильных устройств */
-@media (max-width: 768px) {
-    .card-body {
-        max-height: 300px; /* Для мобильных устройств можно уменьшить высоту */
-    }
-}
