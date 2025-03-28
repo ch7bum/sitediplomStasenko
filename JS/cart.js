@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fullNameInput = document.getElementById("full-name");
     const phoneInput = document.getElementById("phone-number");
 
-    // Создание контейнера для уведомлений (если его нет)
+    // контейнер для уведомлений 
     if (!document.getElementById("notification-container")) {
         const notificationContainer = document.createElement("div");
         notificationContainer.id = "notification-container";

@@ -176,7 +176,7 @@ footer a:hover {
     text-align: center;
 }
 
-/* Убираем ненужные столбцы */
+/*ненужные столбцы */
 #cart-items th:nth-child(2),
 #cart-items td:nth-child(2),
 #cart-items th:nth-child(4),
@@ -317,7 +317,7 @@ footer a:hover {
     }
 }
 
-/* Обновляем карточки, чтобы поддерживать прокрутку, если текст слишком длинный */
+/* прокрутка, если текст слишком длинный */
 .card-body {
     overflow-x: auto;
 }
